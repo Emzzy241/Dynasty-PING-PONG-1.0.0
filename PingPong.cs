@@ -17,12 +17,21 @@ class PingPong{
         double userNumber = double.Parse(userNumberInString);
 
         // running a for loop to show users all numbers less than the njumber user enterred 
+            // this message shouldn't be added to the forloop, it keeps showing it for every iteration of the loop and that is very Ugly
 
-        for (int lesserNumber = 0; lesserNumber <= userNumber; lesserNumber++)
+            Console.WriteLine("Here are the numbers less than " + userNumber);
+
+        for (int lesserNumber = 1; lesserNumber <= userNumber; lesserNumber++)
+        
         {
-            Console.WriteLine("Here are the numbers less than" + userNumber);
             Console.WriteLine(lesserNumber);
             
+            // running a branch to determine if we have a ping, or a pong, or a ping-pong
+            // FOR Ping: I used the modulo operator here to determine if I can divide any of the lesserNumber by 3
+            if(lesserNumber % 3 == 0){
+
+                Console.WriteLine("Ping");
+            }
         }
 
         
