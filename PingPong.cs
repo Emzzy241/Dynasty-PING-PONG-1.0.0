@@ -1,5 +1,7 @@
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; // as you can see, this one is greyed out, don't forget that we added it to ensure we could use our Dictionary anytime any day
+// a Dictionary is capable of storing strings and integers at a time
+
 
 class PingPong{
     static void Main(){
@@ -14,7 +16,16 @@ class PingPong{
 
         double userNumber = double.Parse(userNumberInString);
 
+        // running a for loop to show users all numbers less than the njumber user enterred 
 
+        for (int lesserNumber = 0; lesserNumber <= userNumber; lesserNumber++)
+        {
+            Console.WriteLine("Here are the numbers less than" + userNumber);
+            Console.WriteLine(lesserNumber);
+            
+        }
+
+        
         
     }
 }
