@@ -29,8 +29,10 @@ class PingPong{
             // running a branch to determine if we have a ping, or a pong, or a ping-pong
             // FOR Ping: I used the modulo operator here to determine if I can divide any of the lesserNumber by 3
             if(lesserNumber % 3 == 0){
+                // Console.Write("Ping");
 
                 Console.WriteLine("Ping");
+                
             }
         }
 
