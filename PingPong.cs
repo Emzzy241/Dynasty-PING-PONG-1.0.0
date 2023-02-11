@@ -20,7 +20,12 @@ class PingPong
 
         string userNumberInString = Console.ReadLine();
 
-        int userNumber = int.Parse(userNumberInString);
+        double userNumber = double.Parse(userNumberInString);
+        // a double datatype can take in both an integer and a floating point number(decimal), I used it here to avoid my application
+        // from breaking down when my user enters a floating that is greater than 0; Although the double datatype wouldn't
+        // approximate the number for me, it will only round the number down and work with it like that
+        // so for a number like 9.9, it picks only 9 and works with it(its just like a Math.trunc() in javascript that will only pick 9 even if user enters 9.85)
+
 
 
         // a new feature that will run the Main() method again if user inputs a number less than 1
@@ -41,6 +46,7 @@ class PingPong
             // Console.WriteLine(lesserNumber); ... This is not needed, our forloop prints out the lesser numbers anyway
 
 
+
             // running a branch to determine if we have a ping, or a pong, or a ping-pong
             // FOR Ping: I used the modulo operator here to determine if I can divide any of the lesserNumber by 3
             if ((lesserNumber % 3 == 0 && lesserNumber % 5 == 0))
@@ -50,11 +56,13 @@ class PingPong
                 // string newLesserNumber = lesserNumber.ToString();
             }
 
-            else if(lesserNumber % 3 == 0){
+            else if (lesserNumber % 3 == 0)
+            {
                 Console.WriteLine("Ping");
             }
 
-            else if(lesserNumber % 5 == 0){
+            else if (lesserNumber % 5 == 0)
+            {
                 Console.WriteLine("Pong");
             }
             else
