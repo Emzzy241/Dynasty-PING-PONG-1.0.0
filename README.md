@@ -1,7 +1,7 @@
 # Dynasty PING PONG  1.0.0
 #### made by Mojiboye Emmanuel
 
-#### A car Dealership App with C#
+#### A  Ping-Pong Game made with C#
 
 ## Technologies Used
 * Git
