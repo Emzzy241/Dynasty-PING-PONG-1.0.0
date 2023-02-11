@@ -24,10 +24,11 @@ class PingPong
 
 
         // a new feature that will run the Main() method again if user inputs a number less than 1
-        // if (userNumber < 1)
-        // {
-        //     Main();
-        // }
+        if (userNumber < 1)
+        {
+            // when user enters a -ve number, Application runs again brcause I need only a Positive number from me user
+            Main();
+        }
 
         // running a for loop to show users all numbers less than the njumber user enterred 
         // this message shouldn't be added to the forloop, it keeps showing it for every iteration of the loop and that is very Ugly
