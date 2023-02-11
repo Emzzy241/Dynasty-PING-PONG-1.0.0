@@ -12,9 +12,19 @@ class PingPong{
 
         // saving user's number and turning it into an double; a double can account for oth integer and decimal numbers
 
+
+
+
+
         string userNumberInString = Console.ReadLine();
 
-        double userNumber = double.Parse(userNumberInString);
+        int userNumber = int.Parse(userNumberInString);
+        
+        
+        // a new feature that will run the Main() method again if user inputs a number less than 1
+        if(userNumber < 1){
+            Main();
+        }
 
         // running a for loop to show users all numbers less than the njumber user enterred 
             // this message shouldn't be added to the forloop, it keeps showing it for every iteration of the loop and that is very Ugly
@@ -28,11 +38,28 @@ class PingPong{
             
             // running a branch to determine if we have a ping, or a pong, or a ping-pong
             // FOR Ping: I used the modulo operator here to determine if I can divide any of the lesserNumber by 3
-            if(lesserNumber % 3 == 0){
-                // Console.Write("Ping");
+            if(lesserNumber % 3 == 0 && lesserNumber % 5 ==0){
+                Console.WriteLine("Ping-Pong");
 
-                Console.WriteLine("Ping");
+                // string newLesserNumber = lesserNumber.ToString();
+                // // newLesserNumber.Replace("3", "Ping");
+
+                // Console.WriteLine(newLesserNumber);
+
+
+
+                // string pingString = lesserNumber.ToString();
+
+                // pingString.Replace("3", "Ping");
+                // pingString.Remove(1);
+
+                // Console.WriteLine("Ping");
+
+                // Console.WriteLine(pingString);
                 
+            }
+            else{
+                Console.WriteLine(lesserNumber);
             }
         }
 
